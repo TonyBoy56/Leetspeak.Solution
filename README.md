@@ -18,15 +18,11 @@ _This application translates a user input string into "Leetspeak", by:_
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| -------------------:|
 | The application replaces every "e" and "E" in a user input with a "3" | "hello" | "h3llo" |
-| The application replaces every "t" and "T in a user input with a "7" | "hello" | "h3llo" |
-| The application replaces every "e" in a user input with a "3" | "hello" | "h3llo" |
-| The application replaces every "e" in a user input with a "3" | "hello" | "h3llo" |
+| The application replaces every "t" and "T in a user input with a "7" | "let go" | "l37 go" |
+| The application replaces every "I" in a user input with a "1" | "I do" | "1 do" |
+| The application replaces every "o" and "O" in a user input with a "0" | "Lets go" | "L37s g0" |
+| The application replaces every "s" that is not the first character in a word of the user input with a "z" | "Lets do it" | "L37z d0 i7" |
 
-
-| User enters a string into the console after being prompted and the program returns an array with each "o" replaced with a "0" | user enters hello | [h,3,l,l,0] is returned |
-| User enters a string into the console after being prompted and the program returns an array with each "I" replaced with a "1" | user enters "I Do" | [1, ,D,0] is returned |
-| User enters a string into the console after being prompted and the program returns an array with each "t" replaced with a "7" | user enters "Let's Do It" | [L,3,7,',s, ,D,0, ,1,7 ] is returned |
-| User enters a string into the console after being prompted and the program returns an array with each "s" replaced with a "z" | user enters "Let's Do It" | [L,3,7,',z, ,D,0, ,1,7 ] is returned |
 ## Setup/Installation Requirements
 
 ### Install .NET Core
