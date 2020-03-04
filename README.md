@@ -1,6 +1,6 @@
 # _Leetspeak_
 
-#### _C# Testting practice for Epicodus_, _Mar. 2, 2020_
+#### _C# Testing practice for Epicodus_, _Mar. 2, 2020_
 
 #### By _**Michelle Morin, Zakkrey Short, Eric Settels**_
 
