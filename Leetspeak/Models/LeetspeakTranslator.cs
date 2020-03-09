@@ -5,9 +5,18 @@ namespace Leetspeak.Models
 {
   public class LeetspeakTranslator
   {
-    public string Translate(string input)
+    public string Input { get; set; }
+    public string TranslatedInput { get; set; }
+
+    public LeetspeakTranslator(string input)
     {
-      char[] inputArr = input.ToCharArray();
+      Input = input;
+      TranslatedInput = "";
+    }
+
+    public void Translate()
+    {
+      char[] inputArr = Input.ToCharArray();
       for(int i =0; i<inputArr.Length; i++)
       {
         if(inputArr[i] == 'e'|| inputArr[i] == 'E')
@@ -45,8 +54,7 @@ namespace Leetspeak.Models
           string reconstructWord = new String(tempWordArr);
           reconstructedInput[j] = reconstructWord;
       }
-      string convertedString = String.Join(" ", reconstructedInput);
-      return convertedString;
+      TranslatedInput = String.Join(" ", reconstructedInput);
     }
   }
 }

@@ -1,24 +1,20 @@
-using System;
-using System.Collections.Generic;
-using Leetspeak.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Leetspeak
 {
- public class Program
+  public class Program
   {
-   public static void Main()
+    public static void Main(string[] args)
     {
-      string userInput = GetUserInput();
-      LeetspeakTranslator translator = new LeetspeakTranslator();
-      string convertedString = translator.Translate(userInput);
-      Console.WriteLine(convertedString);
-    }
+      var host = new WebHostBuilder()
+        .UseKestrel()
+        .UseContentRoot(Directory.GetCurrentDirectory())
+        .UseIISIntegration()
+        .UseStartup<Startup>()
+        .Build();
 
-    public static string GetUserInput()
-    {
-      Console.WriteLine("enter a sentence to turn into Leetspeak:");
-      string userInput = Console.ReadLine();
-      return userInput;
+      host.Run();
     }
   }
 }
